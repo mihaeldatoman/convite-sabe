@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita sair comigo?</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(img/Heart.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            background: rgb(36, 1, 1);
+            color: rgb(254, 254, 254);
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Aceita sair comigo?</h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <button class="btn" onmouseover="desvia(this)">NÃO</button>
+    </div>
+
+    <script>
+        function sim() {
+            alert("Você aceitou ser minha dama de honra num jantar muito especial! :)");
+            alert("Caso tenha visto e aceito meu convite, entre em contato que marcarei data, local e hora. Bjs, te aguardo! :)");
+        }
+
+        function desvia(t) {
+            var botaoNao = t;
+            botaoNao.style.position = "absolute";
+            botaoNao.style.left = numeroAleatorio(10, 90);
+            botaoNao.style.top = numeroAleatorio(10, 90);
+            console.log("Opa, desviei!");
+        }
+
+        function numeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min) + "%";
+        }
+    </script>
+</body>
+
+</html>
